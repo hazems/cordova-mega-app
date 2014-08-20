@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/voiceMemo.css" />
+        <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.0.min.css">    
+    
+        <script src="jqueryMobile/jquery-1.10.2.min.js"></script>                                  
+        <script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>   
+        <script src="jqueryMobile/jqm.page.params.js"></script>
+                     
+        <title>Memo</title>
+    </head>
+    <body>        
+         <div data-role="page" id="memoList">
+             <div data-role="header">
+                <a href="#about" data-role="button" data-icon="info" data-mini="true">About</a>
+                <h1>Memo List</h1>
+                <a id="newMemo" data-role="button" data-icon="plus">New</a>
+             </div>
+             <div data-role="content">
+                 <ul data-role="listview" id="memoListView">
+                 </ul> 
+                <div data-role="popup" id="memoTypeSelection">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                       <li data-role="divider">Memo Type</li>
+                       <li><a href="#memoCapture?newMemo=voice">Voice Memo</a></li>
+                       <li><a href="#memoCapture?newMemo=photo">Photo Memo</a></li>
+                    </ul>
+                 </div>                   
+             </div>
+             <div data-role="footer" data-position="fixed">
+                <h1><a href="#" data-role="button" data-icon="delete" id="removeAllVoices">Remove All Memos</a></h1>
+             </div>                
+         </div>        
+        
+        <div data-role="page" id="memoCapture">
+             <div data-role="header">
+                 <a href="#memoList" data-role="button" data-icon="home">Home</a>                                
+                 <h1>Your Memo</h1>                                  
+                 <a href="#" data-role="button" data-rel="back" data-icon="back">Back</a> 
+              </div>
+              <div data-role="content">
+                <div data-role="fieldcontain">
+                    <input type="hidden" id="mid"/>
+                    <input type="hidden" id="mtype"/>
+                                    
+                    <label for="title">Title</label> 
+                    <input type="text" name="title" id="title"></input><br/>
+                        
+                    <label for="desc">Details</label> 
+                    <textarea name="desc" id="desc"></textarea><br/>    
+                    
+                    <label for="mtime">Time</label> 
+                    <input type="text" name="mtime" id="mtime" readonly="readonly"></input><br/>   
+                    
+                    <input type="hidden" id="location"/>
+                    
+                    <div class="center-wrapper">
+	                    <input type="button" id="getPhoto" data-icon="camera" value="Get Photo" class="center-button" data-inline="true"/>
+	                    <input type="button" id="recordVoice" data-icon="audio" value="Record" class="center-button" data-inline="true"/>
+	                    <input type="button" id="playVoice" data-icon="refresh" value="Playback" class="center-button" data-inline="true"/><br/>
+                    </div>
+                                        
+                    <input type="button" value="Save Memo" data-icon="check" id="saveMemo"/> 
+ 	                <input type="button" id="removeMemo" data-icon="delete" value="Remove"/> <br/>                 
+                    
+                    <div style="width: 100%;">
+    					<img id="imageView" style="width: 100%;"></img>
+    				</div><br/>   
+	                
+	                <div data-role="popup" id="photoTypeSelection" data-dismissible="false">
+	                   <ul data-role="listview" data-inset="true" style="min-width:210px;">
+	                      <li data-role="divider">Get Photo From</li>
+	                      <li><a id="photoFromGallery" href="#">Gallery</a></li>
+	                      <li><a id="photoFromCamera" href="#">Camera</a></li>
+	                   </ul>
+	                </div>  	
+	                       
+					<div data-role="popup" id="recordVoiceDialog" data-dismissible="false" style="width:250px">
+					    <div data-role="header">
+					        <h1>Recording</h1>
+					    </div>
+					
+					    <div data-role="content">
+			                <div class="center-wrapper">
+			                	<div id="voiceDuration"></div>
+			                    <input type="button" id="stopRecordingVoice" value="Stop Recording" 
+			                           class="center-button" data-inline="true"/>
+			                </div>
+					    </div>
+					</div> 		                       
+	                                                                 				     
+                </div>
+              </div>
+        </div>        
+        
+        <div data-role="page" id="about">
+            <div data-role="header">
+                  <a href="#memoList" data-role="button" data-icon="home">Home</a>              
+                  <h1>About</h1>             
+                  <a href="#" data-role="button" data-rel="back" data-icon="back">Back</a>       
+               </div>
+               <div data-role="content">
+                <p>This application is developed by Elegant Solutions powered by Apache Cordova:<br/>
+                   <a href="https://cordova.apache.org" target="_blank">https://cordova.apache.org</a></p>
+            </div>
+        </div>                         
+                
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <!-- Application JS files -->    
+        <script type="text/javascript" src="js/api/AppUtil.js"></script>  
+        <script type="text/javascript" src="js/api/FileManager.js"></script>         
+        <script type="text/javascript" src="js/api/CacheManager.js"></script>        
+        <script type="text/javascript" src="js/api/MemoManager.js"></script> 
+        
+        <script type="text/javascript" src="js/model/MemoItem.js"></script> 
+
+        <script type="text/javascript" src="js/vc/common.js"></script>                          
+        <script type="text/javascript" src="js/vc/memoList.js"></script>           
+        <script type="text/javascript" src="js/vc/memoCapture.js"></script>                         
+    </body>
+</html>

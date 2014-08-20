@@ -1,0 +1,14 @@
+a {
+	text-decoration: none;
+}
+
+.center-wrapper {
+	text-align: center;
+}
+.center-wrapper * {
+	margin: 0 auto;
+}
+
+.center-button {
+	margin: 0 auto;
+}
