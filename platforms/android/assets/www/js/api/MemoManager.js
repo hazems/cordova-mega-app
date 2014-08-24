@@ -3,7 +3,6 @@ var MemoManager = (function () {
   var instance;
  
   function createObject() {
-      var cacheManager = CacheManager.getInstance();
       var fileManager = FileManager.getInstance();      
       var MEMOS_KEY = "memos";
       var APP_BASE_DIRECTORY = "Mega";
@@ -14,36 +13,44 @@ var MemoManager = (function () {
       
       return {
           getMemos: function () {
-              memoMap = cacheManager.get(MEMOS_KEY) || {};
+              memoMap = JSON.parse(window.localStorage.getItem(MEMOS_KEY)) || {};
               
               return memoMap;
           }, 
           getMemoDetails: function (memoID) {
-              memoMap = cacheManager.get(MEMOS_KEY) || {};
+              memoMap = JSON.parse(window.localStorage.getItem(MEMOS_KEY)) || {};
               
               return memoMap[memoID];
           },
           saveMemo: function (memoItem) {  
-              memoMap = cacheManager.get(MEMOS_KEY) || {};
+              memoMap = JSON.parse(window.localStorage.getItem(MEMOS_KEY)) || {};
               
               memoMap[memoItem.id] = memoItem;
               
-              cacheManager.put(MEMOS_KEY, memoMap);
+              window.localStorage.setItem(MEMOS_KEY, JSON.stringify(memoMap));
           }, 
           removeMemo: function(memoID) {
-              cacheManager.get(MEMOS_KEY)[memoID];
-              
-              memoMap = cacheManager.get(MEMOS_KEY);
+              memoMap = JSON.parse(window.localStorage.getItem(MEMOS_KEY)) || {};
               
               if (memoMap[memoID]) {
             	  delete memoMap[memoID];
               }
               
-              cacheManager.put(MEMOS_KEY, memoMap);
+              window.localStorage.setItem(MEMOS_KEY, JSON.stringify(memoMap));
           },
           removeAllMemos: function() {
-              cacheManager.remove(MEMOS_KEY);
+              window.localStorage.removeItem(MEMOS_KEY);
           },
+          showConfirmationMessage: function (message, okHandler) {
+              navigator.notification.confirm(message,
+                   function (index) {
+                       if (index == 1) {
+                           okHandler();
+                       }
+                   },
+                   'MegaApp'
+               );
+           },
           startRecordingVoice: function (recordingCallback) {
               var recordVoice = function(dirPath) {
                   var basePath = "";
@@ -68,7 +75,7 @@ var MemoManager = (function () {
               
               if (device.platform === "Android") {
                   
-                  /* For Android, store the recording under the app directory under the SD Card root ... */
+                  // For Android, store the recording in the app directory under the SD Card root ...
                   var callback = {};
               
                   callback.requestSuccess = recordVoice;
@@ -77,15 +84,15 @@ var MemoManager = (function () {
                   fileManager.requestDirectory(APP_BASE_DIRECTORY, callback);
               } else if (device.platform === "iOS") {
                    
-                  /* For iOS, store recording in app documents directory. if it is left then it will be stored in tmp ... */
+                  // For iOS, store recording in app documents directory ...
                   recordVoice("documents://");
               } else {
                   
-                  /* This is for Windows Phone 8 ... */
+                  // Else for Windows Phone 8, store recording under the app directory ...
                   recordVoice();
               }
           },
-          stopRecordingVoice: function (recordingCallback) {
+          stopRecordingVoice: function () {
               recordingMedia.stopRecord();   
               recordingMedia.release();
           },
@@ -127,7 +134,7 @@ var MemoManager = (function () {
                       fileManager.copyFileToDirectory("", filePath, fileCallback);
                   } else {
                    
-                     //For Windows, do nothing ...
+                     //Else for Windows Phone 8, store the image file in the application's isolated store ...
                      capturingCallback.captureSuccess(filePath);
                   }
               };

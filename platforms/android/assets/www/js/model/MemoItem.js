@@ -2,7 +2,7 @@ var MemoItem = function(memoItem) {
 	var now = new Date().toLocaleString();
 	
 	this.type = memoItem.type || "voice";	
-	this.title = memoItem.title || "";	
+	this.title = memoItem.title || "";
 	this.desc = memoItem.desc || "";
 	this.location = memoItem.location || "";
 	this.mtime = memoItem.mtime || now;	

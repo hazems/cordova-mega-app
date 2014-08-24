@@ -11,7 +11,7 @@
            
             var memoItem = new MemoItem({
                                          "type": $("#mtype").val(),
-                                         "title": $("#title").val() || $("#mtime").val() , 
+                                         "title": $("#title").val() || "Untitled",
                                          "desc": $("#desc").val() || "", 
                                          "location": $("#location").val() || "",
                                          "mtime": $("#mtime").val(),
@@ -26,7 +26,7 @@
         $("#removeMemo").on("tap", function(e) {
             e.preventDefault();
             
-            AppUtil.showConfirmationMessage("Are you sure you want to remove this memo?", removeCurrentMemo);
+            memoManager.showConfirmationMessage("Are you sure you want to remove this memo?", removeCurrentMemo);
         });         
         
         $("#recordVoice").on("tap", function(e) {
@@ -47,7 +47,7 @@
             
             recInterval = setInterval(function() {
                                          recTime = recTime + 1;
-                                         document.getElementById("voiceDuration").innerHTML = "Duration: " + recTime + " seconds";
+                                         $("#voiceDuration").html("Duration: " + recTime + " seconds");
                                       }, 1000);            
          });       
         
@@ -129,7 +129,7 @@
         $("#title").val(memoItem.title);
         $("#desc").val(memoItem.desc);
         $("#location").val(memoItem.location);
-        $("#mtime").val(memoItem.mtime);
+        $("#mtime").html(memoItem.mtime);
         
         $("#recordVoice").closest('.ui-btn').hide();
         $("#getPhoto").closest('.ui-btn').hide();            
@@ -139,9 +139,14 @@
         $("#imageView").attr("src", "");   
         
         if (! isNew) {
-            $("#removeMemo").closest('.ui-btn').show(); 
+            $("#removeMemo").closest('.ui-btn').show();
+            $("#mtime").show();
+            $("#mtime_label").show();
+        } else {
+            $("#mtime").hide();
+            $("#mtime_label").hide();
         }
-        
+ 
         if (memoItem.type == "voice") {
             $("#recordVoice").closest('.ui-btn').show();  
             
@@ -168,7 +173,7 @@
     }
     
     function handleRecordSuccess(newFilePath) {
-        alert("Recording success: " + newFilePath);
+        //alert("Recording success: " + newFilePath);
         var currentFilePath = newFilePath;
  
         $("#location").val(currentFilePath);    
@@ -188,7 +193,7 @@
     }        
     
     function handleCaptureSuccess(newFilePath) {
-        alert("currentFilePath: " + newFilePath);
+        //alert("currentFilePath: " + newFilePath);
  
         $("#imageView").attr("src", newFilePath);
         $("#imageView").show();

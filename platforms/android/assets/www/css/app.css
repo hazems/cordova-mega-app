@@ -12,3 +12,15 @@ a {
 .center-button {
 	margin: 0 auto;
 }
+
+.selectionMenu {
+    min-width:210px;
+}
+
+.memoPhoto {
+    width: 100%;
+}
+
+.recordVoicePopup {
+    width:250px;
+}

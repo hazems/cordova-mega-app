@@ -7,7 +7,7 @@
     	$("#removeAllVoices").on("tap", function(e) {
     		e.preventDefault();
     		
-    	    AppUtil.showConfirmationMessage("Are you sure you want to remove all the memos?", deleteAllMemos);
+    	    memoManager.showConfirmationMessage("Are you sure you want to remove all the memos?", deleteAllMemos);
     	});     
     	
     	$("#newMemo").on("tap", function(e) {
