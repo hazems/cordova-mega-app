@@ -1,11 +1,9 @@
 var MemoItem = function(memoItem) {
-	var now = new Date().toLocaleString();
-	
 	this.type = memoItem.type || "voice";	
 	this.title = memoItem.title || "";
 	this.desc = memoItem.desc || "";
 	this.location = memoItem.location || "";
-	this.mtime = memoItem.mtime || now;	
+	this.mtime = memoItem.mtime || "";
 	this.id = memoItem.id || "Memo_" + (new Date()).getTime();
 };
 

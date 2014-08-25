@@ -268,8 +268,6 @@
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverHandle.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverOptions.js \
-/Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/ios \
-/Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/ios/CameraPopoverHandle.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www \
@@ -293,14 +291,12 @@
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadResult.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileWriter.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Flags.js \
-/Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ios \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Metadata.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android/FileSystem.js \
-/Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ios/FileSystem.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.media/www \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.media/www/Media.js \
 /Users/ibm/Desktop/Desktop1/Packt.Cordova/Projects/megaapp/platforms/android/assets/www/plugins/org.apache.cordova.media/www/MediaError.js \

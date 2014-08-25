@@ -14,7 +14,7 @@
                                          "title": $("#title").val() || "Untitled",
                                          "desc": $("#desc").val() || "", 
                                          "location": $("#location").val() || "",
-                                         "mtime": $("#mtime").val(),
+                                         "mtime":  $("#mtime").html() || new Date().toLocaleString(),
                                          "id": $("#mid").val() || null
                                          });
 
@@ -105,10 +105,16 @@
             //Update Memo
             memoItem = memoManager.getMemoDetails(memoID);            
             isNew = false;
+                   
+            //Change title
+            $("#memoCaptureTitle").html("Edit " + memoItem.type + " memo");
         } else {
             
             //Create a new Memo
-            memoItem = new MemoItem({"type": memoType});        
+            memoItem = new MemoItem({"type": memoType});
+                   
+            //Change title
+            $("#memoCaptureTitle").html("New " + memoType + " memo");
         }
         
         populateRecordingFields(memoItem, isNew);

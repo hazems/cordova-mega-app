@@ -24,3 +24,7 @@ a {
 .recordVoicePopup {
     width:250px;
 }
+
+.ui-header .ui-title {
+    overflow: visible !important; 
+}
