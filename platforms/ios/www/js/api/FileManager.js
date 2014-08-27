@@ -6,7 +6,7 @@ var FileManager = (function () {
       var FILE_BASE = "file:///";
       
       return {
-          copyFileToDirectory: function (dirPath, filePath, fileCallback) {
+          copyFileToDirectory: function (dirPath, filePath, enforceUniqueName, fileCallback) {
               var directoryReady = function (dirEntry) { 
             	  if (filePath.indexOf(FILE_BASE) != 0) {
                       filePath = filePath.replace("file:/", FILE_BASE);
@@ -14,6 +14,12 @@ var FileManager = (function () {
               
                   window.resolveLocalFileSystemURL(filePath, function(file) {
                       var filename = filePath.replace(/^.*[\\\/]/, '');
+                      
+                      if (enforceUniqueName) {
+                    	  console.log("file name before: " + filename);
+                    	  filename = (new Date()).getTime() + filename;
+                    	  console.log("file name after: " + filename);
+                      }
                           
                       file.copyTo(dirEntry, filename, function(fileEntry) {
                          fileCallback.copySuccess(dirEntry.toURL() + filename);

@@ -107,14 +107,14 @@
             isNew = false;
                    
             //Change title
-            $("#memoCaptureTitle").html("Edit " + memoItem.type + " memo");
+            $("#memoCaptureTitle").html("Edit " + (memoItem.type ? memoItem.type : "") + " memo");
         } else {
             
             //Create a new Memo
             memoItem = new MemoItem({"type": memoType});
                    
             //Change title
-            $("#memoCaptureTitle").html("New " + memoType + " memo");
+            $("#memoCaptureTitle").html("New " + (memoType ? memoType : "") + " memo");
         }
         
         populateRecordingFields(memoItem, isNew);
@@ -179,7 +179,7 @@
     }
     
     function handleRecordSuccess(newFilePath) {
-        //alert("Recording success: " + newFilePath);
+        console.log("Recording success: " + newFilePath);
         var currentFilePath = newFilePath;
  
         $("#location").val(currentFilePath);    
@@ -199,7 +199,7 @@
     }        
     
     function handleCaptureSuccess(newFilePath) {
-        //alert("currentFilePath: " + newFilePath);
+    	console.log("Capture success: " + newFilePath);
  
         $("#imageView").attr("src", newFilePath);
         $("#imageView").show();
