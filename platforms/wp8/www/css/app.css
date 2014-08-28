@@ -1,0 +1,30 @@
+a {
+	text-decoration: none;
+}
+
+.center-wrapper {
+	text-align: center;
+}
+.center-wrapper * {
+	margin: 0 auto;
+}
+
+.center-button {
+	margin: 0 auto;
+}
+
+.selectionMenu {
+    min-width:210px;
+}
+
+.memoPhoto {
+    width: 100%;
+}
+
+.recordVoicePopup {
+    width:250px;
+}
+
+.ui-header .ui-title {
+    overflow: visible !important; 
+}
