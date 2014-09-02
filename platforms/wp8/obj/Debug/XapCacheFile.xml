@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="8/28/2014 6:53:21 AM">
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\obj\Debug\com.jsmobile.megaapp.dll" archivePath="com.jsmobile.megaapp.dll" lastWriteTime="8/28/2014 6:53:20 AM" />
+﻿<xapCache source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/3/2014 12:47:17 AM">
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\obj\Debug\com.jsmobile.megaapp.dll" archivePath="com.jsmobile.megaapp.dll" lastWriteTime="9/3/2014 12:47:16 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\config.xml" archivePath="config.xml" lastWriteTime="8/28/2014 6:47:40 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Images\appbar.back.rest.png" archivePath="Images\appbar.back.rest.png" lastWriteTime="3/14/2014 10:54:01 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Images\appbar.close.rest.png" archivePath="Images\appbar.close.rest.png" lastWriteTime="3/14/2014 10:54:01 AM" />
@@ -219,11 +219,11 @@
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\jqueryMobile\jquery.mobile-1.4.0.min.js" archivePath="www\jqueryMobile\jquery.mobile-1.4.0.min.js" lastWriteTime="8/28/2014 6:47:38 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\jqueryMobile\theme-classic.css" archivePath="www\jqueryMobile\theme-classic.css" lastWriteTime="8/28/2014 6:47:38 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\api\FileManager.js" archivePath="www\js\api\FileManager.js" lastWriteTime="8/28/2014 6:47:38 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\api\MemoManager.js" archivePath="www\js\api\MemoManager.js" lastWriteTime="8/28/2014 6:47:38 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\api\MemoManager.js" archivePath="www\js\api\MemoManager.js" lastWriteTime="8/30/2014 8:57:41 PM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\common.js" archivePath="www\js\common.js" lastWriteTime="8/28/2014 6:47:38 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\model\MemoItem.js" archivePath="www\js\model\MemoItem.js" lastWriteTime="8/28/2014 6:47:38 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\vc\memoCapture.js" archivePath="www\js\vc\memoCapture.js" lastWriteTime="8/28/2014 6:53:10 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\vc\memoList.js" archivePath="www\js\vc\memoList.js" lastWriteTime="8/28/2014 6:47:38 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\model\MemoItem.js" archivePath="www\js\model\MemoItem.js" lastWriteTime="8/30/2014 10:12:56 PM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\vc\memoCapture.js" archivePath="www\js\vc\memoCapture.js" lastWriteTime="9/3/2014 12:46:19 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\js\vc\memoList.js" archivePath="www\js\vc\memoList.js" lastWriteTime="8/30/2014 11:47:10 PM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Plugins\org.apache.cordova.dialogs\notification-beep.wav" archivePath="Plugins\org.apache.cordova.dialogs\notification-beep.wav" lastWriteTime="8/28/2014 6:47:39 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\plugins\org.apache.cordova.camera\www\CameraConstants.js" archivePath="www\plugins\org.apache.cordova.camera\www\CameraConstants.js" lastWriteTime="8/28/2014 6:47:40 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js" archivePath="www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js" lastWriteTime="8/28/2014 6:47:40 AM" />
@@ -255,8 +255,8 @@
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\plugins\org.apache.cordova.network-information\www\network.js" archivePath="www\plugins\org.apache.cordova.network-information\www\network.js" lastWriteTime="8/28/2014 6:47:40 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\plugins\org.apache.cordova.network-information\www\Connection.js" archivePath="www\plugins\org.apache.cordova.network-information\www\Connection.js" lastWriteTime="8/28/2014 6:47:40 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\cordova_plugins.js" archivePath="www\cordova_plugins.js" lastWriteTime="8/28/2014 6:47:40 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/28/2014 6:48:41 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="9/3/2014 12:44:49 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="8/28/2014 6:52:18 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="8/28/2014 6:52:18 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="8/28/2014 6:48:42 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="9/3/2014 12:44:49 AM" />
 </xapCache>
