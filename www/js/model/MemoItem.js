@@ -1,5 +1,5 @@
 var MemoItem = function(memoItem) {
-	this.type = memoItem.type || "voice";	
+	this.type = memoItem.type || "voice";
 	this.title = memoItem.title || "";
 	this.desc = memoItem.desc || "";
 	this.location = memoItem.location || "";

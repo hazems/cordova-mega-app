@@ -57,6 +57,7 @@
         });        
         
         $("#stopRecordingVoice").on("tap", function(e) {
+            e.preventDefault();
             $("#recordVoiceDialog").popup("close");
         });
         
@@ -117,7 +118,7 @@
             $("#memoCaptureTitle").html("New " + (memoType ? memoType : "") + " memo");
         }
         
-        populateRecordingFields(memoItem, isNew);
+        initFields(memoItem, isNew);
     });
     
     $(document).on("pagebeforehide", "#memoCapture", function(e) {
@@ -129,7 +130,7 @@
         $.mobile.changePage("#memoList");        
     }
     
-    function populateRecordingFields(memoItem, isNew) {
+    function initFields(memoItem, isNew) {
         $("#mid").val(memoItem.id);
         $("#mtype").val(memoItem.type);
         $("#title").val(memoItem.title);

@@ -4,7 +4,7 @@
 	
     $(document).on("pageinit", "#memoList", function(e) {
     	
-    	$("#removeAllVoices").on("tap", function(e) {
+    	$("#removeAllMemos").on("tap", function(e) {
     		e.preventDefault();
     		
     	    memoManager.showConfirmationMessage("Are you sure you want to remove all the memos?", deleteAllMemos);
@@ -21,24 +21,24 @@
     $(document).on("pageshow", "#memoList", function(e) {
         e.preventDefault();
         
-        updatememoList();
+        updateMemoList();
     });
     
     function deleteAllMemos() {
 		memoManager.removeAllMemos();
 		
-		updatememoList();    	
+		updateMemoList();
     }
     
-    function updatememoList() {
-        var memos = memoManager.getMemos();
+    function updateMemoList() {
+        var memos = memoManager.getMemos(), memo;
 
         $("#memoListView").empty();
                 
         if (jQuery.isEmptyObject(memos)) {
             $("<li>No Memos Available</li>").appendTo("#memoListView");
         } else {
-            for (var memo in memos) {
+            for (memo in memos) {
             	var type = "";
             	
             	if (memos[memo].type == "voice") {
