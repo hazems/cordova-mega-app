@@ -1,4 +1,4 @@
-﻿<xapCache source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/3/2014 12:47:17 AM">
+﻿<xapCache source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/8/2014 7:48:17 AM">
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\obj\Debug\com.jsmobile.megaapp.dll" archivePath="com.jsmobile.megaapp.dll" lastWriteTime="9/3/2014 12:47:16 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\config.xml" archivePath="config.xml" lastWriteTime="8/28/2014 6:47:40 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Images\appbar.back.rest.png" archivePath="Images\appbar.back.rest.png" lastWriteTime="3/14/2014 10:54:01 AM" />
@@ -9,9 +9,9 @@
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\Images\appbar.stop.rest.png" archivePath="Images\appbar.stop.rest.png" lastWriteTime="3/14/2014 10:54:01 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="8/28/2014 6:52:18 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\cordova.js" archivePath="www\cordova.js" lastWriteTime="8/28/2014 6:47:38 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\css\app.css" archivePath="www\css\app.css" lastWriteTime="8/28/2014 6:47:37 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\css\app.css" archivePath="www\css\app.css" lastWriteTime="9/8/2014 7:07:48 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\img\logo.png" archivePath="www\img\logo.png" lastWriteTime="8/28/2014 6:47:37 AM" />
-  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\index.html" archivePath="www\index.html" lastWriteTime="8/28/2014 6:47:37 AM" />
+  <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\index.html" archivePath="www\index.html" lastWriteTime="9/8/2014 7:08:46 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\jqueryMobile\images\ajax-loader.gif" archivePath="www\jqueryMobile\images\ajax-loader.gif" lastWriteTime="8/28/2014 6:47:37 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\jqueryMobile\images\icons-png\action-black.png" archivePath="www\jqueryMobile\images\icons-png\action-black.png" lastWriteTime="8/28/2014 6:47:37 AM" />
   <file source="C:\Users\Naglaa\Documents\GitHub\cordova-mega-app\platforms\wp8\www\jqueryMobile\images\icons-png\action-white.png" archivePath="www\jqueryMobile\images\icons-png\action-white.png" lastWriteTime="8/28/2014 6:47:37 AM" />
