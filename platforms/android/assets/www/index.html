@@ -26,13 +26,41 @@
         <link rel="stylesheet" type="text/css" href="css/app.css" />
         <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.0.min.css">    
     
-        <script src="jqueryMobile/jquery-1.10.2.min.js"></script>                                  
+        <script src="jqueryMobile/jquery-1.10.2.min.js"></script>
+        
+        <script>
+            var domReadyDeferred = $.Deferred();
+            var deviceReadyDeferred = $.Deferred();
+            var jqmReadyDeferred = $.Deferred();
+            
+            document.addEventListener("deviceready", function() {
+                deviceReadyDeferred.resolve();
+            }, false);
+        
+            $(document).on("mobileinit", function () {
+                jqmReadyDeferred.resolve();
+            });
+             
+            $(document).ready(function() {
+                domReadyDeferred.resolve();
+            });
+                       
+            $.when(deviceReadyDeferred, jqmReadyDeferred, domReadyDeferred).then(function () {
+                //Now everything loads fine, you can safely go to the app home ...
+                $.mobile.changePage("#memoList");
+            });
+        </script>
+        
+        
         <script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>   
         <script src="jqueryMobile/jqm.page.params.js"></script>
                      
         <title>Memo</title>
     </head>
-    <body>        
+    <body>
+         <div id="loading" data-role="page">
+             <div class="center-screen">This application is powered by Apache Cordova</div>
+        </div>
          <div data-role="page" id="memoList">
              <div data-role="header" data-position="fixed" data-tap-toggle="false">
                 <a href="#about" data-role="button" data-icon="info" data-mini="true">About</a>

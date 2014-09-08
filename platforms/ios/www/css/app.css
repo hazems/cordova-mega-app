@@ -28,3 +28,10 @@ a {
 .ui-header .ui-title {
     overflow: visible !important; 
 }
+
+.center-screen {
+    position: absolute; 
+    top: 50%; 
+    left: 20px; 
+    margin-top: -1.2em;
+}
