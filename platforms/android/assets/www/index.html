@@ -27,25 +27,23 @@
         <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.0.min.css">    
     
         <script src="jqueryMobile/jquery-1.10.2.min.js"></script>
-        
+                
         <script>
-            var domReadyDeferred = $.Deferred();
             var deviceReadyDeferred = $.Deferred();
             var jqmReadyDeferred = $.Deferred();
             
-            document.addEventListener("deviceready", function() {
-                deviceReadyDeferred.resolve();
-            }, false);
-        
+            $(document).ready(function() {
+                document.addEventListener("deviceready", function() {
+                    deviceReadyDeferred.resolve();
+                }, false);
+            });
+                              
             $(document).on("mobileinit", function () {
                 jqmReadyDeferred.resolve();
             });
-             
-            $(document).ready(function() {
-                domReadyDeferred.resolve();
-            });
-                       
-            $.when(deviceReadyDeferred, jqmReadyDeferred, domReadyDeferred).then(function () {
+                                             
+            $.when(deviceReadyDeferred, jqmReadyDeferred).then(function () {
+                                                                                                
                 //Now everything loads fine, you can safely go to the app home ...
                 $.mobile.changePage("#memoList");
             });
