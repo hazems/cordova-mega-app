@@ -57,7 +57,7 @@
         });        
         
         $("#stopRecordingVoice").on("tap", function(e) {
-            e.preventDefault();        
+            e.preventDefault();
             $("#recordVoiceDialog").popup("close");
         });
         
