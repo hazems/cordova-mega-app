@@ -5,7 +5,9 @@
     $(document).on("pageinit", "#memoList", function(e) {
 
     	$("#removeAllMemos").on("vclick", function(e) {
-    		e.preventDefault();
+            e.preventDefault();
+            
+            console.log("Remove all memos is called ...")
 
     	    memoManager.showConfirmationMessage("Are you sure you want to remove all the memos?", deleteAllMemos);
     	});

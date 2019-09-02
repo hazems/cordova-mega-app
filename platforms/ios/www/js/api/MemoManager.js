@@ -112,11 +112,11 @@ var MemoManager = (function () {
               }
           },
           getPhoto: function (capturingCallback, fromGallery) {
-        	   var source = Camera.PictureSourceType.CAMERA;
+        	var source = Camera.PictureSourceType.CAMERA;
 
-        	   if (fromGallery) {
-        	      source = Camera.PictureSourceType.PHOTOLIBRARY;
-        	   }
+        	if (fromGallery) {
+        	    source = Camera.PictureSourceType.PHOTOLIBRARY;
+        	}
 
              var captureSuccess = function(filePath) {
 
@@ -145,13 +145,12 @@ var MemoManager = (function () {
              };
 
              navigator.camera.getPicture(captureSuccess,
-            		  					  capturingCallback.captureError,
-            		  					  {
-            	                 quality: 70,
-            	  						   destinationType: Camera.DestinationType.FILE_URI,
-            	  						   sourceType: source,
-            	  						   correctOrientation: true,
-                               encodingType: Camera.EncodingType.JPEG
+            		  					  capturingCallback.captureError, {
+            	                              quality: 70,
+            	  						      destinationType: Camera.DestinationType.FILE_URI,
+            	  						      sourceType: source,
+            	  						      correctOrientation: true,
+                                              encodingType: Camera.EncodingType.JPEG
             	  						  });
           },
           cleanUpResources: function() {
