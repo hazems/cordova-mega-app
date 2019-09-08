@@ -1,1 +1,1 @@
-{"plugins":["org.apache.cordova.camera","org.apache.cordova.device","org.apache.cordova.dialogs","org.apache.cordova.file","org.apache.cordova.media","org.apache.cordova.network-information"]}
+{"plugins":["cordova-plugin-network-information","cordova-plugin-media","cordova-plugin-file","cordova-plugin-dialogs","cordova-plugin-camera","cordova-plugin-device"]}

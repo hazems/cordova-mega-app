@@ -1,4 +1,3 @@
-//Singleton Object
 var FileManager = (function () {     
   var instance;
  

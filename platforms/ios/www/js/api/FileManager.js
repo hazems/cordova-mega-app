@@ -1,4 +1,3 @@
-//Singleton Object
 var FileManager = (function () {     
   var instance;
  
@@ -16,9 +15,7 @@ var FileManager = (function () {
                       var filename = filePath.replace(/^.*[\\\/]/, '');
                       
                       if (enforceUniqueName) {
-                    	  console.log("file name before: " + filename);
                     	  filename = (new Date()).getTime() + filename;
-                    	  console.log("file name after: " + filename);
                       }
                           
                       file.copyTo(dirEntry, filename, function(fileEntry) {

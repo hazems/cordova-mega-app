@@ -1,6 +1,8 @@
 (function() {
 
-    var memoManager = MemoManager.getInstance();
+    var memoManager  = MemoManager.getInstance();
+    var audioManager = AudioManager.getInstance();
+    var photoManager = PhotoManager.getInstance();
     var recInterval;
 
     $(document).on("pageinit", "#memoCapture", function(e) {
@@ -37,7 +39,7 @@
             recordingCallback.recordSuccess = handleRecordSuccess;
             recordingCallback.recordError = handleRecordError;
 
-            memoManager.startRecordingVoice(recordingCallback);
+            audioManager.startRecordingVoice(recordingCallback);
 
             var recTime = 0;
 
@@ -53,7 +55,7 @@
 
         $("#recordVoiceDialog").on("popupafterclose", function(event, ui) {
             clearInterval(recInterval);
-            memoManager.stopRecordingVoice();
+            audioManager.stopRecordingVoice();
         });
 
         $("#stopRecordingVoice").on("vclick", function(e) {
@@ -69,7 +71,7 @@
             playCallback.playSuccess = handlePlaySuccess;
             playCallback.playError = handlePlayError;
 
-            memoManager.playVoice($("#location").val(), playCallback);
+            audioManager.playVoice($("#location").val(), playCallback);
         });
 
         $("#getPhoto").on("vclick", function(e) {
@@ -122,7 +124,7 @@
     });
 
     $(document).on("pagebeforehide", "#memoCapture", function(e) {
-        memoManager.cleanUpResources();
+        audioManager.cleanUpResources();
     });
 
     function removeCurrentMemo() {
@@ -176,7 +178,7 @@
         capturingCallback.captureSuccess = handleCaptureSuccess;
         capturingCallback.captureError = handleCaptureError;
 
-        memoManager.getPhoto(capturingCallback, fromGallery);
+        photoManager.getPhoto(capturingCallback, fromGallery);
     }
 
     function handleRecordSuccess(newFilePath) {
