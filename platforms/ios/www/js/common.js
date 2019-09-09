@@ -8,6 +8,10 @@ $.mobile.defaultPageTransition   = 'none';
 $.mobile.defaultDialogTransition = 'none';
 $.mobile.buttonMarkup.hoverDelay = 0;
 
+window.MemoConstants = {
+    APP_BASE_DIRECTORY: "Mega"
+};
+
 (function() {
 
 	//Use JQM params plugin in order to pass data between pages.

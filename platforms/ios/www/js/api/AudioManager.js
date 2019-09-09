@@ -3,51 +3,30 @@ var AudioManager = (function () {
   
     function createObject() {
         var fileManager = FileManager.getInstance();
-        var APP_BASE_DIRECTORY = "Mega";
         var audioMedia;
         var recordingMedia;
         var mediaFileName;
   
         return {
             startRecordingVoice: function (recordingCallback) {
-                var recordVoice = function(dirPath) {
-                    var basePath = "";
-  
-                    if (dirPath) {
-                        basePath = dirPath;
-                    }
-  
-                    mediaFileName = (new Date()).getTime() + ".wav";
-  
-                    var mediaFilePath = basePath + mediaFileName;
-  
-                    var recordingSuccess = function() {
-                        recordingCallback.recordSuccess(mediaFilePath);
-                    };
-  
-                    recordingMedia = new Media(mediaFilePath, recordingSuccess, recordingCallback.recordError);
-  
-                    // Record audio
-                    recordingMedia.startRecord();
-                };
-  
                 if (device.platform === "Android") {
   
                     // For Android, store the recording in the app directory.
                     var callback = {};
+                    var audioManager = this;
   
-                    callback.requestSuccess = recordVoice;
+                    callback.requestSuccess = function(dirPath) {
+                        audioManager._recordVoice(dirPath, recordingCallback);
+                    };
                     callback.requestError = recordingCallback.recordError;
   
-                    fileManager.requestDirectory(APP_BASE_DIRECTORY, callback);
+                    fileManager.requestDirectory(MemoConstants.APP_BASE_DIRECTORY, callback);
                 } else if (device.platform === "iOS") {
   
                     // For iOS, store recording in app documents directory.
-                    recordVoice("documents://");
+                    this._recordVoice("documents://", recordingCallback);
                 } else {
-  
-                    // Else for other platforms, store recording under the default directory.
-                    recordVoice();
+                    console.error("Sorry, unsupported platform ...");
                 }
             },
             stopRecordingVoice: function () {
@@ -60,6 +39,8 @@ var AudioManager = (function () {
                 }
 
                 this.cleanUpResources();
+
+                // Play Media file
                 audioMedia = new Media(filePath, playCallback.playSuccess, playCallback.playError);
                 audioMedia.play();
             },
@@ -75,6 +56,20 @@ var AudioManager = (function () {
                     recordingMedia.release();
                     recordingMedia = null;
                 }
+            },
+            _recordVoice: function(dirPath, recordingCallback) {
+                var basePath = (dirPath) ? dirPath : "";
+                mediaFileName = (new Date()).getTime() + ".wav";
+
+                var mediaFilePath = basePath + mediaFileName;
+
+                var recordingSuccess = function() {
+                    recordingCallback.recordSuccess(mediaFilePath);
+                };
+
+                // Record audio
+                recordingMedia = new Media(mediaFilePath, recordingSuccess, recordingCallback.recordError);
+                recordingMedia.startRecord();
             }
       };
     };
